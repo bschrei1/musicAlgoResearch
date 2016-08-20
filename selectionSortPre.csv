@@ -1,0 +1,68 @@
+Timestamp,"Please indicate your survey ID number (last 4 digits of phone + last 3 digits of home ZIP, formatted dddd-ddd)",Please indicate your professor (if you're at Swarthmore) or class number (if you're at Haverford),"Have you played a musical instrument, or seriously pursued singing or dancing? ","If yes above, what instrument(s) or type(s) of dance or singing?","If yes above, to what degree of proficiency in music or with that instrument",How confident are you about coding a sorting algorithm?,Are you familiar with big-O notation?,I do not understand programming.,What is the time complexity of selection sort?
+3/22/16 20:36,1747-108,Haverford: cs104 Topics in Programming,No,,,3,1,2,I don't know
+3/22/16 20:38,0666-054,Haverford: cs104 Topics in Programming,Yes,"Piano, Casual Singing Performances",2,3,1,2,I don't know
+3/22/16 20:42,7404-520,Haverford: cs104 Topics in Programming,Yes,"Trumpet, Bass Guitar",3,2,1,3,I don't know
+3/22/16 21:36,6965-226,Haverford: cs104 Topics in Programming,No,,,3,1,3,O(n^2)
+3/23/16 10:04,7656-221,Haverford: cs104 Topics in Programming,No,,,3,1,2,I don't know
+3/23/16 10:17,1678-096,Haverford: cs104 Topics in Programming,Yes,"Tuba, Trombone",3,4,1,2,O(n)
+3/23/16 20:10,7705-071,Haverford: cs104 Topics in Programming,Yes,"Piano, Cello, Clarinet, Harmonica, Theremin",4,4,4,2,I don't know
+3/24/16 11:22,,Swarthmore: Pf. Brody,Yes,test,1,1,1,1,O(1)
+3/24/16 15:44,9645-041,Haverford: cs104 Topics in Programming,No,,,1,1,4,I don't know
+3/24/16 16:39,7050-402,Haverford: cs104 Topics in Programming,Yes,Piano,3,1,1,2,I don't know
+3/24/16 18:55,4486-119,Swarthmore: Pf. Brody,Yes,Bass Trombone,4,4,2,3,I don't know
+3/24/16 22:02,5642-403,Swarthmore: Pf. Brody,No,,,4,1,2,O(n)
+3/24/16 23:09,3715-111,Haverford: cs104 Topics in Programming,Yes,"Drums, Recorder",1,3,1,3,I don't know
+3/25/16 9:02,6933-816,Haverford: cs104 Topics in Programming,No,,1,3,1,1,I don't know
+3/25/16 11:48,0355-024,Haverford: cs104 Topics in Programming,Yes,Piano,3,3,1,3,I don't know
+3/25/16 12:04,4818-831,Swarthmore: Pf. Knerr,No,,,4,3,2,I don't know
+3/25/16 12:52,3933-102,Haverford: cs104 Topics in Programming,Yes,Violin,4,3,1,3,I don't know
+3/25/16 13:05,0752-041,Haverford: cs104 Topics in Programming,Yes,Flute? Trump? ,4,2,1,2,O(n log n)
+3/25/16 15:38,1986-626,Swarthmore: Pf. Knerr,Yes,"mainly singing, some piano and harmonica",4,2,1,1,I don't know
+3/26/16 17:49,2740-445,Swarthmore: Pf. Brody,Yes,"Saxaphone, singing",3,1,1,3,I don't know
+3/27/16 9:30,8124-702,Swarthmore: Pf. Brody,Yes,flute,3,4,1,3,O(log n)
+3/27/16 13:15,1488-043,Swarthmore: Pf. Knerr,Yes,Piano,2,2,2,4,I don't know
+3/27/16 14:21,9242-081,Swarthmore: Pf. Brody,No,,1,1,1,2,I don't know
+3/27/16 14:53,9474-254,Swarthmore: Pf. Knerr,Yes,"Voice, piano, swing dance",3,4,4,2,I don't know
+3/27/16 15:41,8314-726,Swarthmore: Pf. Brody,Yes,"Viola, piano",2,1,1,2,I don't know
+3/27/16 17:05,5546-009,Swarthmore: Pf. Knerr,Yes,Guitar,2,1,3,2,I don't know
+3/27/16 18:48,9494-042,Swarthmore: Pf. Knerr,Yes,Baritone Saxophone,3,1,3,3,I don't know
+3/27/16 20:31,7608-070,Swarthmore: Pf. Knerr,Yes,Classical Guitar,3,1,2,4,I don't know
+3/27/16 21:05,2757-410,Swarthmore: Pf. Brody,Yes,"Piano, viola",4,3,1,2,I don't know
+3/27/16 22:06,7250-912,Swarthmore: Pf. Knerr,No,,,1,1,4,I don't know
+3/27/16 23:32,7167-109,Swarthmore: Pf. Knerr,Yes,drums,5,1,3,2,I don't know
+3/27/16 23:51,4226-407,Swarthmore: Pf. Brody,Yes,Guitar,3,3,1,1,O(log n)
+3/28/16 0:08,1652-109,Swarthmore: Pf. Knerr,Yes,piano,4,1,4,2,I don't know
+3/28/16 9:24,2222-084,Swarthmore: Pf. Knerr,Yes,Saxophone,3,2,4,4,O(n!)
+3/28/16 9:35,6180-619,Swarthmore: Pf. Knerr,Yes,Piano and Drumming and Acting,4,4,3,2,I don't know
+3/28/16 9:56,1898-009,Swarthmore: Pf. Knerr,Yes,Trumpet,3,4,4,1,O(log n)
+3/28/16 11:45,3815-382,Swarthmore: Pf. Knerr,No,,,1,2,3,O(n)
+3/28/16 14:44,2364-060,Swarthmore: Pf. Knerr,No,,,3,4,2,I don't know
+3/28/16 14:54,1145-816,Swarthmore: Pf. Brody,Yes,Saxaphone,3,2,1,3,O(n)
+3/28/16 18:07,6505-081,Swarthmore: Pf. Brody,Yes,Flute,2,3,1,3,I don't know
+3/28/16 20:47,2843-602,Swarthmore: Pf. Knerr,Yes,"viola, ballet",4,1,1,3,I don't know
+3/28/16 21:19,8772-041,Swarthmore: Pf. Brody,Yes,Violin,3,2,1,2,I don't know
+3/28/16 22:28,4666-334,Swarthmore: Pf. Brody,Yes,"flute, piano; tap & swing dance",5,2,1,5,I don't know
+3/28/16 22:57,6921-243,Swarthmore: Pf. Brody,No,,,1,1,1,I don't know
+3/29/16 0:07,7968-081,Swarthmore: Pf. Brody,Yes,guitar,4,1,1,2,I don't know
+3/29/16 7:23,2942-081,Swarthmore: Pf. Brody,Yes,Piano,3,1,1,2,O(log n)
+3/29/16 12:33,,Swarthmore: Pf. Knerr,No,,,1,1,3,I don't know
+3/29/16 13:22,6527-006,Swarthmore: Pf. Knerr,No,,1,3,3,3,O(n^2)
+3/29/16 21:25,,Swarthmore: Pf. Brody,Yes,I danced ballet in middle school and currently do English/Scottish  folk dancing.  I also sang in choir for several years. ,3,3,1,3,I don't know
+3/30/16 20:10,3642-145,Swarthmore: Pf. Meeden,Yes,"piano, ballet, hiphop, clarinet",5,3,4,2,I don't know
+4/9/16 16:44,,Haverford: cs106 Data Structures,Yes,"guitar, ballet",2,3,3,3,O(n log n)
+4/9/16 17:17,8336-065,Haverford: cs106 Data Structures,Yes,Trombone,3,4,3,1,O(n^2)
+4/9/16 18:36,2200-000,Haverford: cs106 Data Structures,Yes,Flute,4,3,4,2,O(n^2)
+4/9/16 22:22,1483-010,Haverford: cs106 Data Structures,No,,1,3,3,2,O(n^2)
+4/10/16 19:26,5482-540,Haverford: cs106 Data Structures,Yes,"I played tabla (Indian drums), and sing Western Classical Music (now acapella)",4,3,5,2,O(n^2)
+4/10/16 23:07,1685-205,Haverford: cs106 Data Structures,No,,1,3,4,2,O(n log n)
+4/10/16 23:32,9176-814,Haverford: cs106 Data Structures,Yes,"A cappella, piano",3,3,4,1,O(n log n)
+4/11/16 7:51,5757-825,Haverford: cs106 Data Structures,Yes,Violin,4,2,5,2,O(n^2)
+4/11/16 17:03,,Haverford: cs106 Data Structures,No,,,3,4,2,O(log n)
+4/11/16 17:07,8696-041,Haverford: cs106 Data Structures,Yes,"Flute, piano, singing",4,3,2,1,I don't know
+4/12/16 0:03,8605-066,Haverford: cs106 Data Structures,Yes,Classical singing (bass),3,2,4,3,O(n^2)
+4/12/16 7:44,,Haverford: cs106 Data Structures,Yes,Trumpet,3,2,3,3,O(n)
+4/12/16 8:34,7323-070,Haverford: cs106 Data Structures,Yes,Piano,4,2,3,3,O(n)
+4/12/16 8:36,6736-050,Haverford: cs106 Data Structures,Yes,Trumpet,2,3,3,3,O(n)
+4/12/16 9:16,6233-015,Haverford: cs106 Data Structures,Yes,"clarinet, piano",3,2,4,3,O(n^2)
+4/13/16 16:44,6727-155,Haverford: cs106 Data Structures,No,,,4,4,2,O(n^2)
+4/27/16 15:18,3815-382,Swarthmore: Pf. Knerr,No,,,1,2,3,O(n)
