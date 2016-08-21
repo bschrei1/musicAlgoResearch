@@ -133,23 +133,65 @@ attitudeTableSort = data.frame(namesVec, meanVec, varVec, pValVec, statisticVec)
 #     setNames.times..height.
 mergedTable["confidenceBigODiff"] = mergedTable["confidentBigOPost"]- mergedTable["confidentBigO"]
 mergedTable["confidenceSortDiff"] = mergedTable["confidentSortPost"]- mergedTable["confidentSort"]
-computeMFDiff<-function(myVec, mergedTable){
+computeMFDiff<-function(myVec, mergedTable, thisCol){
   manVec = c()
   womanVec = c()
+  manConfVec = c()
+  womanConfVec = c()
   for (i in 1:length(myVec)){
     gend = mergedTable[i,"Gender."]
     if (gend == 'Femal' || gend == 'Female' || gend == 'female'){
       womanVec = c(womanVec,myVec[i])
+      womanConfVec = c(womanConfVec,mergedTable[i,thisCol])
     }
     if (gend == 'Male' || gend == 'male' || gend == 'M'|| gend == 'man'){
       manVec = c(manVec,myVec[i])
+      manConfVec = c(manConfVec,mergedTable[i,thisCol])
     }
   }
-  print("line 193")
-  print( mean(manVec) )
+  print("mean manConfVec")
+  print( mean(manConfVec) )
+  print("mean womanConfVec")
+  print( mean(womanConfVec) )
+  print('t test for diff in confidence')
+  print(t.test(manConfVec,womanConfVec))
   
   gendTest = t.test(manVec,womanVec)
   return(gendTest)
 }
-OConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceBigODiff"],mergedTable)
-codeConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceSortDiff"],mergedTable)
+OConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceBigODiff"],mergedTable,"confidentBigOPost")
+codeConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceSortDiff"],mergedTable,"confidentSortPost")
+computeCourseDiff<-function(myVec, mergedTable){
+  hav106Vec = c()
+  hav104Vec = c()
+  swatVec = c()
+  
+  for (i in 1:length(myVec)){
+    course = mergedTable[i,12] #courses column
+    if (course == 'Dougherty 104'){
+      hav104Vec = c(hav104Vec,myVec[i])
+      
+    }
+    else if (course == 'Dougherty 106'){
+      hav106Vec = c(hav106Vec,myVec[i])
+      
+    }
+    else{
+      swatVec = c(swatVec,myVec[i])
+    }
+  }
+ 
+  
+  havTest = t.test(hav104Vec,hav106Vec)
+  print(havTest)
+  hav104SwatTest = t.test(hav104Vec,swatVec)
+  print(hav104SwatTest)
+  hav106SwatTest = t.test(hav106Vec,swatVec)
+  print(hav106SwatTest)
+  return(c(havTest,hav104SwatTest,hav106SwatTest))
+  #return(c(swatVec,hav104Vec,hav106Vec))
+}
+#results=computeCourseDiff(mergedTable[,"confidenceBigODiff"],mergedTable)
+courseOConfDiffTestSort = computeCourseDiff(mergedTable[,"confidenceBigODiff"],mergedTable)
+courseCodeConfDiffTestSort = computeCourseDiff(mergedTable[,"confidenceSortDiff"],mergedTable)
+confidenceDropped<- subset(mergedTable, confidentBigOPost <confidentBigO)
