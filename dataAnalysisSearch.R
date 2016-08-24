@@ -175,26 +175,82 @@ for (i in 4:17){
   }
 }
 attitudeTableSearch = data.frame(namesVec, meanVec, varVec, pValVec, statisticVec)#, confidenceIntVec)
-#     setNames.times..height.
+
 mergedTable["confidenceBigODiff"] = mergedTable["confidentBigOPost"]- mergedTable["confidentBigO"]
 mergedTable["confidenceSearchDiff"] = mergedTable["confidentSearchPost"]- mergedTable["confidentSearch"]
-computeMFDiff<-function(myVec, mergedTable){
+computeMFDiff<-function(myVec, mergedTable, thisCol){
   manVec = c()
   womanVec = c()
+  manConfVec = c()
+  womanConfVec = c()
   for (i in 1:length(myVec)){
     gend = mergedTable[i,"Gender."]
     if (gend == 'Femal' || gend == 'Female' || gend == 'female'){
       womanVec = c(womanVec,myVec[i])
+      womanConfVec = c(womanConfVec,mergedTable[i,thisCol])
     }
     if (gend == 'Male' || gend == 'male' || gend == 'M'|| gend == 'man'){
       manVec = c(manVec,myVec[i])
+      manConfVec = c(manConfVec,mergedTable[i,thisCol])
     }
   }
-  print("line 193")
-  print( mean(manVec) )
+  print("mean manConfVec")
+  print( mean(manConfVec) )
+  print("mean womanConfVec")
+  print( mean(womanConfVec) )
+  print('t test for diff in confidence')
+  print(t.test(manConfVec,womanConfVec))
   
   gendTest = t.test(manVec,womanVec)
   return(gendTest)
 }
-OConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceBigODiff"],mergedTable)
-codeConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceSearchDiff"],mergedTable)
+OConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceBigODiff"],mergedTable,"confidentBigOPost")
+codeConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceSearchDiff"],mergedTable,"confidentSearchPost")
+
+
+computeCourseDiff<-function(myVec, mergedTable) {
+  
+  hav104Vec = c()
+  swatVec = c()
+  
+  for (i in 1:length(myVec)){
+    course = mergedTable[i,12] #courses column
+    if (course == 'Dougherty 104'){
+      hav104Vec = c(hav104Vec,myVec[i])
+     
+    }
+    else if (course != 'Dougherty 106'){
+      swatVec = c(swatVec,myVec[i])
+      
+    }
+   
+  }
+  print("t.test for binary search ####################################" )
+  print(t.test(hav104Vec,swatVec) )
+
+}
+courseOConfDiffTestSearch = computeCourseDiff(mergedTable[,"confidenceBigODiff"],mergedTable)
+courseCodeConfDiffTestSearch = computeCourseDiff(mergedTable[,"confidenceSearchDiff"],mergedTable)
+
+
+bigOPostVec = postResponses[,'confidentBigOPost']
+searchPostVec = postResponses[,'confidentSearchPost']
+technicalVec = postResponses[,'technicalSuccess']
+predictTechnical = lm(technicalVec~bigOPostVec+searchPostVec)
+summary(predictTechnical)
+
+predictTechnical2 = lm(technicalVec~bigOPostVec)
+summary(predictTechnical2)
+
+
+predictTechnical3 = lm(technicalVec~searchPostVec)
+summary(predictTechnical3)
+
+
+courseTable = table(postResponses[3])
+genderTable = table(postResponses["Gender."])
+musicTalentTable = table(mergedTable[6])
+raceTable = table(postResponses[20])
+
+
+

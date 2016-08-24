@@ -159,8 +159,8 @@ computeMFDiff<-function(myVec, mergedTable, thisCol){
   gendTest = t.test(manVec,womanVec)
   return(gendTest)
 }
-OConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceBigODiff"],mergedTable,"confidentBigOPost")
-codeConfDiffTestSearch = computeMFDiff(mergedTable[,"confidenceSortDiff"],mergedTable,"confidentSortPost")
+OConfDiffTestSort= computeMFDiff(mergedTable[,"confidenceBigODiff"],mergedTable,"confidentBigOPost")
+codeConfDiffTestSort = computeMFDiff(mergedTable[,"confidenceSortDiff"],mergedTable,"confidentSortPost")
 computeCourseDiff<-function(myVec, mergedTable){
   hav106Vec = c()
   hav104Vec = c()
@@ -195,3 +195,21 @@ computeCourseDiff<-function(myVec, mergedTable){
 courseOConfDiffTestSort = computeCourseDiff(mergedTable[,"confidenceBigODiff"],mergedTable)
 courseCodeConfDiffTestSort = computeCourseDiff(mergedTable[,"confidenceSortDiff"],mergedTable)
 confidenceDropped<- subset(mergedTable, confidentBigOPost <confidentBigO)
+
+bigOPostVec = postResponses[,'confidentBigOPost']
+sortPostVec = postResponses[,'confidentSortPost']
+technicalVec = postResponses[,'technicalSuccess']
+predictTechnical = lm(technicalVec~bigOPostVec+sortPostVec)
+summary(predictTechnical) 
+
+predictTechnical2 = lm(technicalVec~bigOPostVec)
+summary(predictTechnical2)
+
+
+predictTechnical3 = lm(technicalVec~sortPostVec)
+summary(predictTechnical3)
+plot(sortPostVec,technicalVec)
+courseTable = table(postResponses[3])
+genderTable = table(postResponses["Gender."])
+musicTalentTable = table(mergedTable[6])
+raceTable = table(postResponses[20])
